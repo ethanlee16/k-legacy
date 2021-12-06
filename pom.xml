@@ -34,19 +34,33 @@
               <updatePolicy>never</updatePolicy>
           </releases>
       </pluginRepository>
+      <pluginRepository>
+        <id>runtime.verification</id>
+        <name>Runtime Verification Repository</name>
+        <url>https://s3.us-east-2.amazonaws.com/runtimeverificationmaven/internal</url>
+        <snapshots><enabled>false</enabled></snapshots>
+        <releases><enabled>true</enabled></releases>
+      </pluginRepository>
+      <pluginRepository>
+        <id>runtime.verification.snapshots</id>
+        <name>Runtime Verification Snapshot Repository</name>
+        <url>https://s3.us-east-2.amazonaws.com/runtimeverificationmaven/snapshots</url>
+        <snapshots><enabled>true</enabled></snapshots>
+        <releases><enabled>false</enabled></releases>
+      </pluginRepository>
   </pluginRepositories>
   <repositories>
     <repository>
-      <id>runtime-verification</id>
+      <id>runtime.verification</id>
       <name>Runtime Verification Repository</name>
-      <url>http://office.runtimeverification.com:8888/repository/internal</url>
+      <url>https://s3.us-east-2.amazonaws.com/runtimeverificationmaven/internal</url>
       <snapshots><enabled>false</enabled></snapshots>
       <releases><enabled>true</enabled></releases>
     </repository>
     <repository>
-      <id>runtime-verification.snapshots</id>
+      <id>runtime.verification.snapshots</id>
       <name>Runtime Verification Snapshot Repository</name>
-      <url>http://office.runtimeverification.com:8888/repository/snapshots</url>
+      <url>https://s3.us-east-2.amazonaws.com/runtimeverificationmaven/snapshots</url>
       <snapshots><enabled>true</enabled></snapshots>
       <releases><enabled>false</enabled></releases>
     </repository>
@@ -62,14 +76,14 @@
   </repositories>
   <distributionManagement>
     <repository>
-      <id>runtime-verification</id>
+      <id>runtime.verification</id>
       <name>Runtime Verification Repository</name>
-      <url>http://office.runtimeverification.com:8888/repository/internal</url>
+      <url>s3://runtimeverificationmaven/internal</url>
     </repository>
     <snapshotRepository>
-      <id>runtime-verification.snapshots</id>
+      <id>runtime.verification.snapshots</id>
       <name>Runtime Verification Snapshot Repository</name>
-      <url>http://office.runtimeverification.com:8888/repository/snapshots</url>
+      <url>s3://runtimeverificationmaven/snapshots</url>
     </snapshotRepository>
   </distributionManagement>
 
